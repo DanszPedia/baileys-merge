@@ -1,0 +1,123 @@
+{
+  "name": "dansz",
+  "version": "1.19.22",
+  "description": "dansz — WhatsApp Web Multi-Device API with interactive messages, community helpers and optional VoIP",
+  "author": "Echa",
+  "license": "MIT",
+  "main": "./lib/index.js",
+  "module": "./lib/index.mjs",
+  "types": "./index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "import": "./lib/index.mjs",
+      "require": "./lib/index.js"
+    },
+    "./voip/v1": {
+      "types": "./lib/VoIP/index.d.ts",
+      "import": "./lib/VoIP/index.js",
+      "require": "./lib/Compat/voip-loader.js"
+    },
+    "./button-helper/v1": {
+      "types": "./lib/Compat/button-helper-v1.d.ts",
+      "import": "./lib/Compat/button-helper-v1.mjs",
+      "require": "./lib/Compat/button-helper-v1.js"
+    },
+    "./rich/classic/v1": "./lib/Compat/rich/rich-classic.js",
+    "./rich/carousel/v1": "./lib/Compat/rich/rich-carousel.js",
+    "./rich/menu/v1": "./lib/Compat/rich/rich-menu.js",
+    "./rich/webui/v1": "./lib/Compat/rich/rich-webui.js",
+    "./rich/a2ui/v1": "./lib/Compat/rich/a2ui.js",
+    "./mex/v1": "./lib/Compat/mex-v1.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/",
+    "WAProto/",
+    "licenses/",
+    "README.md",
+    "LICENSE",
+    "NOTICE-THIRD-PARTY.md",
+    "FORK-MERGE-AUDIT.md",
+    "index.d.ts",
+    "scripts/",
+    "test/"
+  ],
+  "scripts": {
+    "lint": "node ./scripts/lint.js",
+    "test": "node --test",
+    "prepack": "npm run lint && npm test"
+  },
+  "dependencies": {
+    "@adiwajshing/keyed-db": "^0.2.4",
+    "@cacheable/node-cache": "^1.4.0",
+    "@hapi/boom": "^9.1.3",
+    "@pinojs/redact": "^0.4.0",
+    "async-mutex": "^0.5.0",
+    "axios": "^1.6.0",
+    "cache-manager": "^5.7.6",
+    "chalk": "^4.1.2",
+    "cheerio": "^1.0.0-rc.10",
+    "fflate": "^0.8.2",
+    "file-type": "^16.5.4",
+    "form-data": "^4.0.0",
+    "gradient-string": "^2.0.2",
+    "libphonenumber-js": "^1.10.20",
+    "libsignal": "npm:@levvicode/libsignal-node",
+    "lodash": "^4.17.21",
+    "lru-cache": "^11.1.0",
+    "music-metadata": "^7.12.3",
+    "p-queue": "^9.0.0",
+    "pino": "^9.6.0",
+    "protobufjs": "^6.11.3",
+    "uuid": "^10.0.0",
+    "ws": "^8.13.0"
+  },
+  "peerDependencies": {
+    "@roamhq/wrtc": "*",
+    "audio-decode": "^2.2.3",
+    "fluent-ffmpeg": "^2.1.2",
+    "jimp": "1.6.0",
+    "link-preview-js": "^3.0.0",
+    "qrcode-terminal": "^0.12.0",
+    "sharp": "^0.33.3",
+  },
+  "peerDependenciesMeta": {
+    "@roamhq/wrtc": {
+      "optional": true
+    },
+    "audio-decode": {
+      "optional": true
+    },
+    "fluent-ffmpeg": {
+      "optional": true
+    },
+    "jimp": {
+      "optional": true
+    },
+    "link-preview-js": {
+      "optional": true
+    },
+    "qrcode-terminal": {
+      "optional": true
+    },
+    "sharp": {
+      "optional": true
+    }
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "keywords": [
+    "dansz",
+    "baileys",
+    "whatsapp",
+    "whatsapp-web",
+    "whatsapp-api",
+    "multi-device",
+    "interactive-message",
+    "native-flow",
+    "community",
+    "voip"
+  ]
+}
